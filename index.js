@@ -1,3 +1,4 @@
+require('dotenv').config();
 const socks = require('socksv5');
 
 // Konfigurasi Username dan Password
@@ -22,8 +23,8 @@ server.useAuth(socks.auth.UserPassword((user, password, callback) => {
 }));
 
 // Jalankan server di port 1080
-server.listen(1080, '0.0.0.0', () => {
-  console.log('SOCKS5 proxy dengan autentikasi berjalan di port 1080');
+server.listen(process.env.PORT || 1212, '0.0.0.0', () => {
+  console.log('SOCKS5 proxy dengan autentikasi berjalan di port '+process.env.PORT || 1212);
 });
 
 // Penanganan error
