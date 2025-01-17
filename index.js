@@ -3,7 +3,7 @@ const socks = require('socksv5');
 // Membuat server SOCKS4 dengan user dan password
 const server = socks.createServer({
   authenticate: (username, password, socket, callback) => {
-    if (username === 'ahmadsofuwan' && password === 'ahmadsofuwan') {
+    if (username === 'ahmadsofuwan' && password === 'ahmadsofuwan123123') {
       callback(true);
     } else {
       callback(false);
